@@ -1,112 +1,49 @@
-Sistema de Gerenciamento de Biblioteca – CRUD de Livros (Python OOP)
+📚 CRUD de Biblioteca em Python
 
-Este projeto é um CRUD de Livros utilizando Programação Orientada a Objetos (POO) em Python.
-Ele simula o funcionamento básico de uma biblioteca, permitindo:
+Este projeto é um CRUD simples de gerenciamento de livros usando Programação Orientada a Objetos (POO) em Python. Ele simula o funcionamento de uma biblioteca, com classes para Livro, Biblioteca e um controlador interno de estoque.
 
-📌 Cadastro de livros
+🚀 Funcionalidades
 
-📌 Controle de estoque
+Adicionar livros ao estoque
 
-📌 Remoção de itens
+Remover livros do estoque
 
-📌 Consulta de quantidade
+Listar livros disponíveis
 
-📌 Estrutura com classes, encapsulamento e responsabilidades bem definidas
+Consultar quantidade de um título específico
+
+Criar múltiplas bibliotecas com estoques independentes
 
 🧱 Estrutura do Projeto
 
-O projeto é composto por três partes principais:
+O projeto utiliza três classes principais:
 
-1. Classe Livro
+📘 Livro
 
-Representa um livro individual.
+Representa um livro com título, autor e ano.
 
-Atributos:
+🏛 Biblioteca
 
-titulo
+Representa uma biblioteca. Cada instância pode criar e acessar seu próprio estoque.
 
-autor
+📦 Estoque (classe interna)
 
-ano
+Controla o estoque de livros, armazenando quantidades, listando e permitindo alterações.
 
-2. Classe Biblioteca
+A classe __Estoque é privada dentro da classe Biblioteca, reforçando encapsulamento.
 
-Representa uma biblioteca e contém um estoque interno.
+🛠 Tecnologias usadas
 
-Métodos principais:
+Python 3
 
-get_estoque() – retorna uma instância do estoque
+Programação Orientada a Objetos (POO)
 
-mostrar_livros() – lista livros cadastrados
+🧩 Melhorias Futuras
 
-3. Classe interna __Estoque
+Persistência de dados (JSON, SQLite ou CSV)
 
-Controla os livros disponíveis.
+Interface de linha de comando (CLI)
 
-Responsável por:
+Interface gráfica simples (Tkinter)
 
-add_books() – adicionar itens ao estoque
-
-remove_books() – remover itens
-
-listar_livros() – listar catálogo
-
-verifica_quantidade() – consultar quantidade
-
-▶️ Como usar
-Criar livros
-livro1 = Livro("Era do gelo", "Sheikspare", 2010)
-livro2 = Livro("Era do gelo 2", "Sheikspare", 2011)
-
-Criar bibliotecas
-b1 = Biblioteca("Atenas")
-b2 = Biblioteca("Sophi")
-
-Acessar o estoque
-estoque = b1.get_estoque()
-
-Adicionar livros
-estoque.add_books(livro1, 10)
-estoque.add_books(livro2, 5)
-
-Listar livros
-estoque.listar_livros()
-
-Verificar quantidade
-estoque.verifica_quantidade("Era do gelo")
-
-🏗️ Conceitos de POO Aplicados
-
-Este projeto demonstra:
-
-Encapsulamento (uso de atributos privados __)
-
-Classes internas
-
-Responsabilidade única (SRP)
-Estoque é isolado da biblioteca.
-
-Abstração
-Usuário não interage diretamente com o dicionário interno.
-
-Modularidade
-Cada classe tem uma função clara.
-
-🐛 Possíveis Melhorias Futuras
-
-Persistência dos dados (JSON/SQLite)
-
-Interface CLI ou GUI
-
-API REST com Flask ou Django
-
-Testes unitários com pytest
-
-Controle de usuários (administrador/cliente)
-
-Tratamento de erros mais robusto
-
-📄 Licença
-
-Este projeto é livre para uso educacional.
-Sinta-se à vontade para modificar e evoluir o sistema.
+API com Flask ou FastAPI
